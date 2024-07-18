@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  quanliquanan:
+    image: quanliquanan:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"  # Map port 80 of the container to port 8080 on the host
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    volumes:
+      - ./app-data:/app/app-data  # Mount the app-data directory to /app/app-data in the container

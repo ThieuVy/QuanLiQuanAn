@@ -1,0 +1,45 @@
+@page
+@model FDangKi
+
+@{
+    ViewData["Title"] = "Đăng ký";
+}
+
+<h2>ĐĂNG KÝ TÀI KHOẢN</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="TenTK">Tên Người Dùng*</label>
+        <input type="text" class="form-control" id="TenTK" name="TenTK" required />
+    </div>
+    <div class="form-group">
+        <label for="HoTen">Họ tên</label>
+        <input type="text" class="form-control" id="HoTen" name="HoTen" required />
+    </div>
+    <div class="form-group">
+        <label for="NgaySinh">Ngày sinh</label>
+        <input type="date" class="form-control" id="NgaySinh" name="NgaySinh" required />
+    </div>
+    <div class="form-group">
+        <label for="DiaChi">Địa chỉ</label>
+        <input type="text" class="form-control" id="DiaChi" name="DiaChi" required />
+    </div>
+    <div class="form-group">
+        <label for="SoDT">Số Điện Thoại*</label>
+        <input type="text" class="form-control" id="SoDT" name="SoDT" required />
+    </div>
+    <div class="form-group">
+        <label for="MatKhau">Mật Khẩu*</label>
+        <input type="password" class="form-control" id="MatKhau" name="MatKhau" required />
+    </div>
+    <div class="form-group">
+        <label for="Email">Địa Chỉ Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" required />
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="DieuKien" name="DieuKien" required />
+        <label class="form-check-label" for="DieuKien">Tôi đồng ý với các điều khoản và chính sách</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Tạo Tài Khoản</button>
+    <a asp-page="/Login" class="btn btn-secondary">Đăng nhập</a>
+</form>
